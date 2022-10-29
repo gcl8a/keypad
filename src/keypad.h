@@ -30,7 +30,7 @@ private:
     
 public:
     Keypad(void);
-    uint8_t CheckKeypress(void);
+    uint8_t checkKeypress(void);
 };
 
 //class CodeChecker

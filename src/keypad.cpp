@@ -12,7 +12,7 @@
         pinMode(COL3, INPUT);
     }
     
-    uint8_t Keypad::CheckKeypress(void)
+    uint8_t Keypad::checkKeypress(void)
     {
         uint8_t key = 0;
         
