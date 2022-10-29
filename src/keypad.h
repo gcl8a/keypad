@@ -19,14 +19,14 @@ private:
     uint8_t prevKey = 0;
     
     //defaults
-    uint8_t COL1 = 9;
-    uint8_t COL2 = 6;
-    uint8_t COL3 = 4;
+    uint8_t COL1 = 6;
+    uint8_t COL2 = 10;
+    uint8_t COL3 = 8;
 
-    uint8_t ROW1 = 10;
-    uint8_t ROW2 = 8;
-    uint8_t ROW3 = 7;
-    uint8_t ROW4 = 5;
+    uint8_t ROW1 = 7;
+    uint8_t ROW2 = 5;
+    uint8_t ROW3 = 4;
+    uint8_t ROW4 = 9;
     
 public:
     Keypad(void);
