@@ -1,7 +1,15 @@
 #include <keypad.h>
 
-    Keypad::Keypad(void)
+    Keypad::Keypad(uint8_t c1, uint8_t c2, uint8_t c3, uint8_t r1, uint8_t r2, uint8_t r3, uint8_t r4)
     {
+        ROW1 = r1;
+        ROW2 = r2;
+        ROW3 = r3;
+        ROW4 = r4;
+        COL1 = c1;
+        COL2 = c2;
+        COL3 = c3;
+
         pinMode(ROW1, INPUT_PULLUP);
         pinMode(ROW2, INPUT_PULLUP);
         pinMode(ROW3, INPUT_PULLUP);
@@ -47,31 +55,20 @@
     }
 
 
-//class CodeChecker
-//{
-//private:
-//    uint8_t codeLength;
-//    uint8_t digits[];
-//    uint8_t index = 0;
-//    
-//public:
-//    CodeChecker(void) : digits(4), codeLength = 4;
-//    {
-//        ResetDigits();
-//    }
-//    
-//    void ResetDigits(void)
+//    //CodeChecker::CodeChecker(void);
+   
+//    void CodeChecker::ResetDigits(void)
 //    {
 //        for(int i = 0; i < codeLength; i++)
 //            digits[i] = 255;
 //        index = 0;
 //    }
-//    
-//    uint8_t HandleDigit(uint8_t digit)
+   
+//    uint8_t CodeChecker::HandleDigit(uint8_t digit)
 //    {
 //        if(digit == POUND)
 //        {
-//            if(index == 4) //right length
+//            if(index == 3) //right length
 //            {
 //                uint8_t success = (digits[0] == 2) && (digits[1] == 7) && (digits[2] == 5) && (digits[3] == 7);
 //                ResetDigits();
@@ -79,19 +76,18 @@
 //            }
 //            else return 0;
 //        }
-//        
+       
 //        else if(digit == STAR)
 //        {
 //            ResetDigits();
 //            return 0;
 //        }
-//        
+       
 //        else
 //        {
-//            if(index < 4) digits[index++] = digit;
+//            if(index < 3) digits[index++] = digit;
 //            return 0;
 //        }
-//
+
 //        return 0;
 //    }
-//};

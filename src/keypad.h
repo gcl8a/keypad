@@ -29,55 +29,31 @@ private:
     uint8_t ROW4 = 9;
     
 public:
-    Keypad(void);
+    //Keypad(void);
+    Keypad(uint8_t c1, uint8_t c2, uint8_t c3, uint8_t r1, uint8_t r2, uint8_t r3, uint8_t r4);
     uint8_t checkKeypress(void);
 };
 
-//class CodeChecker
-//{
-//private:
+class MetalKeypad : public Keypad //I don't know the model number...
+{
+public:
+    MetalKeypad(void) : Keypad(6, 10, 8, 7, 5, 4, 9) {}
+};
+
+// class CodeChecker
+// {
+// private:
 //    uint8_t codeLength;
-//    uint8_t digits[];
+//    uint8_t digits[3];
 //    uint8_t index = 0;
-//    
-//public:
-//    CodeChecker(void) : digits(4), codeLength = 4;
-//    {
-//        ResetDigits();
-//    }
-//    
-//    void ResetDigits(void)
-//    {
-//        for(int i = 0; i < codeLength; i++)
-//            digits[i] = 255;
-//        index = 0;
-//    }
-//    
-//    uint8_t HandleDigit(uint8_t digit)
-//    {
-//        if(digit == POUND)
-//        {
-//            if(index == 4) //right length
-//            {
-//                uint8_t success = (digits[0] == 2) && (digits[1] == 7) && (digits[2] == 5) && (digits[3] == 7);
-//                ResetDigits();
-//                return success;
-//            }
-//            else return 0;
-//        }
-//        
-//        else if(digit == STAR)
-//        {
-//            ResetDigits();
-//            return 0;
-//        }
-//        
-//        else
-//        {
-//            if(index < 4) digits[index++] = digit;
-//            return 0;
-//        }
-//
-//        return 0;
-//    }
-//};
+   
+// public:
+//    CodeChecker(void)
+//     {
+//         codeLength = 3;
+//         ResetDigits();
+//     }
+   
+//    void ResetDigits(void);
+//    uint8_t HandleDigit(uint8_t digit);
+// };
