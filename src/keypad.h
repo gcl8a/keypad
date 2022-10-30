@@ -34,10 +34,10 @@ public:
     uint8_t checkKeypress(void);
 };
 
-class MetalKeypad : public Keypad //I don't know the model number...
+class Metal32340SWKeypad : public Keypad //https://www.mpja.com/Keypad-Numeric-X_Y-3X4-Metal-Face/productinfo/32340+SW/
 {
 public:
-    MetalKeypad(void) : Keypad(6, 10, 8, 7, 5, 4, 9) {}
+    Metal32340SWKeypad(void) : Keypad(6, 10, 8, 7, 5, 4, 9) {}
 };
 
 // class CodeChecker
