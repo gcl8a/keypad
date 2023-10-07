@@ -37,7 +37,7 @@ public:
 class Metal32340SWKeypad : public Keypad //https://www.mpja.com/Keypad-Numeric-X_Y-3X4-Metal-Face/productinfo/32340+SW/
 {
 public:
-    Metal32340SWKeypad(void) : Keypad(6, 10, 8, 7, 5, 4, 9) {} //pins 4 - 10, in order on keypad
+    Metal32340SWKeypad(void) : Keypad(6, 10, 8, 7, 5, 4, 9) {} 
 };
 
 // class CodeChecker
